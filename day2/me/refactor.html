@@ -1,0 +1,47 @@
+<!-- 1.导航菜单使用nav，不用div：nav是HTML5语义标签，专门用于页面主导航区块；div只是通用容器，没有语义，屏幕阅读器无法识别这是导航区域 -->
+
+<!-- 2.内容区块用section，不用article：section用于划分页面主题章节（关于我、技能、工作）；article代表可以独立完整分发的内容（一篇文章、一条帖子），本页面的区块不能单独独立发布，所以用section -->
+
+<!-- 3.技能列表用ul，不用一堆span：ul是无序列表，专门用来标记一组并列条目，自带列表语义；span只是行内通用容器，没有“列表”含义，不利于无障碍与SEO -->
+
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <title>把 div 汤改成语义化结构</title>
+  </head>
+  <body>
+    <header>
+      <h1>光影笔记</h1>
+      <nav>
+        <ul>
+          <li><a href="#news">最新</a></li>
+          <li><a href="#about">关于</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="news">
+        <h2>作品 01：城市夜景</h2>
+        <p><time datetime="2026-09-14">2026-09-14</time></p>
+        <p>这张照片拍摄于傍晚的旧城区，用 35mm 定焦手持完成。</p>
+        <ul>
+          <li>夜景</li>
+          <li>街拍</li>
+          <li>35mm</li>
+        </ul>
+      </section>
+      <section id="about">
+        <h2>作品 02：海边延时</h2>
+        <p><time datetime="2026-08-30">2026-08-30</time></p>
+        <p>三脚架固定机位，间隔 2 秒拍摄共 240 帧。</p>
+        <ul class="tags">
+          <li>延时</li>
+          <li>海景</li>
+          <li>24mm</li>
+        </ul>
+      </section>
+    </main>
+    <footer>© 2026 光影笔记</footer>
+  </body>
+</html>
